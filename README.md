@@ -1,0 +1,2 @@
+# MeteoAPI
+A weather scrapper
