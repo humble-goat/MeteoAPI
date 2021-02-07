@@ -6,11 +6,11 @@ def print_data(_data):
     if isinstance(_data, list):
         for counter, _part_day in enumerate(_data):
             day = datetime.datetime.fromtimestamp(_part_day['time'])
-            celsius = int((_part_day['temperature'] - 32) * 5 / 9)
+            celsius = int(_part_day['temperature'])
             wind_gust = _part_day['windGust']
             wind_speed = _part_day['windSpeed']
             humidity = _part_day['humidity'] * 100
-            dew_point = int((_part_day['dewPoint'] - 32) * 5 / 9)
+            dew_point = int(_part_day['dewPoint'])
             summary = _part_day['summary']
             pressure = int(_part_day['pressure'])
 

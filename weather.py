@@ -12,9 +12,9 @@ class Flag(Enum):
 
 def get_forecast(_lat, _long, _flag, _day=''):
     if _day:
-        site = requests.get(f'https://darksky.net/details/{_lat},{_long}/{_day}')
+        site = requests.get(f'https://darksky.net/details/{_lat},{_long}/{_day}/ca12/en')
     else:
-        site = requests.get(f'https://darksky.net/forecast/{_lat},{_long}')
+        site = requests.get(f'https://darksky.net/forecast/{_lat},{_long}/ca12/en')
 
     soup = BeautifulSoup(site.content, features='html.parser')
 
